@@ -4,6 +4,7 @@
 -- ========================================
 
 -- 1. 用户表 (必需)
+DROP TABLE users;
 CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT UNIQUE NOT NULL,
@@ -17,6 +18,7 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 -- 2. 用户设置表 (成人内容过滤必需)
+DROP TABLE user_settings;
 CREATE TABLE IF NOT EXISTS user_settings (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT UNIQUE NOT NULL,
@@ -30,6 +32,7 @@ CREATE TABLE IF NOT EXISTS user_settings (
 );
 
 -- 3. 播放记录表 (观看历史)
+DROP TABLE play_records;
 CREATE TABLE IF NOT EXISTS play_records (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL,
@@ -51,6 +54,7 @@ CREATE TABLE IF NOT EXISTS play_records (
 );
 
 -- 4. 收藏表
+DROP TABLE favorites;
 CREATE TABLE IF NOT EXISTS favorites (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL,
@@ -71,6 +75,7 @@ CREATE TABLE IF NOT EXISTS favorites (
 );
 
 -- 5. 搜索历史表
+DROP TABLE search_history;
 CREATE TABLE IF NOT EXISTS search_history (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL,
@@ -80,6 +85,7 @@ CREATE TABLE IF NOT EXISTS search_history (
 );
 
 -- 6. 跳过配置表 (跳过片头片尾)
+DROP TABLE skip_configs;
 CREATE TABLE IF NOT EXISTS skip_configs (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL,
